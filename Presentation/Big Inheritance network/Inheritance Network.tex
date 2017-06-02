@@ -1,0 +1,42 @@
+
+\documentclass[12pt,letterpaper]{amsart}
+\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+\geometry{letterpaper} % or letter or a5paper or ... etc
+\input xy
+\xyoption{all}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bussproofs}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{color}
+\usepackage[color,matrix,arrow,all]{xy}
+
+\fancyhead{}
+\fancyfoot{}
+
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[CE]{\textsc{david zornek}}
+\fancyhead[CO]{\textsc{concepts, definitions, and inheritance}}
+\renewcommand{\headrulewidth}{0 pt}
+\renewcommand{\footrulewidth}{0 pt}
+
+%Operators
+\DeclareMathOperator{\Rep}{Rep}
+
+%%% BEGIN DOCUMENT
+\begin{document}
+
+\centerline{
+\xymatrix{
+& & & \textbf{*top*} & & & \\
+& & \textbf{event} \ar@[red][ur] & & & \textbf{entity} \ar@[green][ull] & \\
+& \textbf{process} \ar@[red][ur] & \textbf{transition} \ar[u] & & \textbf{phys\_obj} \ar@[green][ur] & & \textbf{abstract} \ar@[green][ul] \\
+\textbf{read} \ar@[red][ur] & \textbf{write} \ar[u] & \textbf{begin\_act} \ar[u] & \textbf{animate\_obj} \ar[ur] & \textbf{print} \ar@[green][u] & & \textbf{information} \ar@[green][u] \\
+& & & & \textbf{book} \ar@[green][u] & & \textbf{narrative} \ar@[green][u] \\
+& & & & & \textbf{novel} \ar@[green][ul] \ar@[green][ur] & }
+}
+
+\end{document}

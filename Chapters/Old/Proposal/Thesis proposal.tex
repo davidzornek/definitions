@@ -1,0 +1,53 @@
+
+\documentclass[12pt]{amsart}
+\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+\geometry{a4paper} % or letter or a5paper or ... etc
+\input xy
+\xyoption{all}
+\usepackage{amsfonts,amssymb, mathrsfs, amsmath}
+\usepackage{bussproofs}
+\usepackage{enumerate}
+
+% See the ``Article customise'' template for come common customisations
+
+\title{Thesis Proposal}
+\author{David Zornek}
+\date{} % delete this line to display the current date
+
+%%% BEGIN DOCUMENT
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+James Pustejovsky's Generative Lexicon (GL) affords us a powerful and efficient formal model of polysemy. Since the GL relies entirely on being able to make use of types provided by an inheritance lattice $\mathcal{I}$, questions pertaining to $\mathcal{I}$ other than its application within GL are necessarily outside of the theory. Within the theory, types are logical atoms. In this thesis, we will expand GL by giving content and grounding to types by identifying them with concepts organized in a hierarchy determined in the act of concept formation. I will examine results in psychological research on concept formation in order to arrive at a formalization of the process of forming a new concept. Armed with this formalization, I will explain conceptual hierarchies are related to the important elements of GL, in particular $\mathcal{I}$ and the generative rules implied by $\mathcal{I}$.
+\end{abstract}
+
+There is a class of theories of decompositional semantics in which the meaning of a lexical item is explained as being composed of certain primitives, usually some logical atom or another. Of course, such theories cannot do the work of providing content to their own primitives, and this leaves us in want of an answer to a number of important questions whose answer should be regarded as desiderata for a full theory of lexical semantics:
+\begin{enumerate}
+\item \emph{What are we to regard as an atom?} A theory will generally tell us what \emph{kinds} of atoms it is dealing with, e.g. predicates, types, etc., but even after this has been decided, we are left with a question of which predicates, types, etc., are to be regarded as primitive to the theory. Even where a theorist gives us a list of specific primitives, the theory cannot do the work of justifying its list of primitives, since any such justification would require making use of these primitives. We should expect that a full theory of lexical semantics should at least give us some guidelines as to how we might decide on an answer to this question.
+\item \emph{What justifies the relations between primitives?} In many theories, in addition to the primitives themselves, we make use of certain relations between them. The same problems arise here as arose above.
+\item \emph{How does the formal semantics of a lexical item relate to its reference?} Reference is at least a major element of a full account of linguistic meaning, and therefore we should want some systematic grounding for the atoms of a semantic theory in the real-world phenomena to which words refer. Unless a theory takes such objects themselves as atoms (and I do not think such a theory is viable for other reasons), then we are left in need of some formal account of how the atoms take on their reference.
+\end{enumerate}
+
+I propose to give a satisfactory answer to the above questions by arguing that logical atoms should ultimately be identified with concepts. While I cannot give a full survey of every formal semantic theory, I will focus on one particular theory as a case study. By looking at how the atoms of James Pustejovsky's Generative Lexicon (GL) can be augmented with concepts in order to meet our desiderata, we will see how the same sort of thing might be done for other theories.
+
+Polysemy is a linguistic phenomenon in which the same word can be used to have distinct, but related, meanings. It is distinct from homonymy, in which two distinct lexical items, by historical accident or some other reason, share the same pronunciation and spelling, but have unrelated meanings. For example, consider the following sentences:
+\begin{enumerate}[(i)]
+\item I am taking out a loan from the \emph{bank}.
+\item I walked into the \emph{bank} to apply for a loan.
+\item They pulled the canoe up onto the river \emph{bank.}
+\end{enumerate}
+In (i), ``bank'' refers to a financial institution that issues loans. In (ii), ``bank'' refers to the building in which a financial institution does business. In (iii), ``bank'' refers to the sloping land beside a body of water. (i) and (ii) are polysemes; (iii) is homonymous with (i) and (ii).
+
+James Pustejovsky \cite{Pustejovsky93} has offered us a formal system, the Generative Lexicon (GL), for analyzing and describing systematic polysemies. In GL, the semantics of a lexical item is specified by a quadruple $\langle\mathcal{A},\mathcal{E},\mathcal{Q},\mathcal{I}\rangle$, where $\mathcal{A}$, $\mathcal{E}$, and $\mathcal{Q}$ are formal structures specifying the \emph{type} of different lexical features of a word, and where $\mathcal{I}$ is a lattice specifying all of the available types and their relations to one another. Systematic rules for creating new word senses are drawn from the inheritance relations given in $\mathcal{I}$.
+
+It seems plausible that Pustejovsky intended for types to be interpreted as concepts, although his motivations as a computer scientist, rather than as a philosopher or cognitive scientist, made it unecessary to spell out this interpretation in detail. Spelling out these details will be the bulk of the thesis.
+
+Some features of Pustejovsky's theory provide us with a set of restrictions on what sorts of research on concepts will prove most valuable to the case study (although if the same sort of project is carried out for another theory of lexical semantics, other restrictions may prove more useful):
+
+There are two major classes of experiments on concepts, which we might call \emph{category-learning experiments} and \emph{concept-formation experiments}. On a more abstract theoretical level, the former are experiments in which subjects are given some task during which they are to correctly categorize things into categories pre-determined by the researcher. In the latter, there is no pre-determined category; the subjects are to create their own. Many researchers believe that hierarchical relations between concepts are created during (or implicit in) concept formation, and therefore results in concept-formation experiments will be the most useful for grounding types existing in a hierachy of inheritance relations in concepts.
+
+Some psychologists have noted, when considering the descriptive question of how subjects actually represent the relations between concepts, that inheritance hierarchies are not always represented properly. Even in these experiments, we see that subjects will organize their concepts in \emph{mostly} hierarchical relations, and therefore we will be concerned with a more normative question of how subjects \emph{should} organize their concepts, in order to conform to epistemic and logical norms. The reason for doing so is that GL is not concerned so much with formalizing how individual language-users represent meanings, but is instead intended to capture a less individualized notion of meaning as considered from the perspective of a whole community of language-users; the semantic typed feature structures are intended to represent how language-users \emph{should} represent meaning, given perfect knowledge about the words they use. From both sides of the issue---the linguistic and psychological---the normative result acts a fair approximation to the descriptive result.
+
+\end{document}

@@ -1,0 +1,31 @@
+%% basic packages
+\usepackage{amsfonts,amssymb, mathrsfs, amsmath}
+\usepackage{setspace}
+\usepackage{bussproofs}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{varwidth}
+\usepackage{bbm}
+\usepackage{wasysym}
+\usepackage{MnSymbol}
+\usepackage{color}
+\usepackage[color,matrix,arrow,all]{xy}
+\usepackage{fancyhdr}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{titlesec}
+\titleformat{\subsubsection}[runin]{\normalfont\bfseries}{\thesubsubsection.}{3pt}{}
+
+%% headers
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[CE]{\textsc{david zornek}}
+\fancyhead[CO]{\textsc{concepts, definitions, and inheritance}}
+\renewcommand{\headrulewidth}{0 pt}
+\renewcommand{\footrulewidth}{0 pt}
+
+\DeclareMathOperator{\Rep}{Rep}
+
+%% Hide marginpar
+\renewcommand{\marginpar}[2][]{}
